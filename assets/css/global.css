@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap");
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Raleway", sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    height: 100vh;
+  }
+
+  p {
+    font-family: "Quicksand", sans-serif;
+  }
+
+
+
+:root {
+    --primary-color: #020228;
+    --secondary-color: #ff00e5;
+    --tertiary-color: #b535f6;
+    --btn-bg-color-gradient: linear-gradient(
+      45deg,
+      #9b34ef 0%,
+      #490cb0 20%,
+      transparent 50%
+    );
+    --btn-link-bg-color: #fff;
+    --btn-link-color: #000;
+    --card-bg-color: linear-gradient(0deg, transparent, #3b1e63);
+    --divider-bg-color: linear-gradient(
+      90deg,
+      #5516ba,
+      rgba(255, 0, 229, 0.5) 80%
+    );
+    --nav-bg-color: rgba(0, 0, 0, 0.3);
+    --text-color: #fff;
+    --link-color: #9e86ff;
+    --form-bg-color: rgba(211, 211, 211, 0.06);
+    --form-field-bg-color: rgba(0, 0, 0, 0.2);
+    --form-field-border: 1px solid rgba(255, 255, 255, 0.7);
+    --form-field-placeholder: rgba(255, 255, 255, 0.7);
+    --form-field-error: rgb(255, 76, 76);
+
+    scroll-behavior: smooth;
+  }
+
+  .button {
+    padding: 16px 40px;
+    background-color: var(--tertiary-color);
+    border-radius: 500px;
+    font-weight: 700;
+    color: var(--text-color);
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 4px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .button.button--gradient {
+    background: var(--btn-bg-color-gradient);
+    outline: 3px solid transparent;
+    transition: background 1s, outline 1s, transform 1s;
+    background-size: 250%;
+  }
+  
+  .button.button--gradient:hover {
+    background-color: transparent;
+    background-position: 100%;
+    outline: 2px solid var(--secondary-color);
+    transform: scale(1.05);
+  }
+
+  @keyframes wiggle {
+    0%,
+    10% {
+      transform: rotate(0);
+    }
+    15% {
+      transform: rotate(-5deg);
+    }
+    20% {
+      transform: rotate(5deg);
+    }
+    25% {
+      transform: rotate(-10deg);
+    }
+    30% {
+      transform: rotate(10deg);
+    }
+    35% {
+      transform: rotate(-10deg);
+    }
+    40%,
+    100% {
+      transform: rotate(0);
+    }
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: var(--tertiary-color);
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color);
+  }
+
+  .footer__link {
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+    color: var(--link-color);
+    text-transform: uppercase;
+    text-decoration: none;
+    margin: 0 14px;
+    letter-spacing: 2px;
+    transition: color 0.5s;
+    font-size: 0.875rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+}
+
+.footer__link:hover {
+  color: var(--text-color);
+}
+
+.footer__legal {
+  font-size: 0.75rem;
+  margin: 16px 50px;
+  color: var(--link-color);
+  text-align: center;
+}
+
+.footer__social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  margin: 40px 0;
+  padding-bottom: 10px;
+}
+
+.menu {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 32px 24px;
+  gap: 24px;
+  align-items: center;
+  background: var(--nav-bg-color);
+  position: fixed;
+  top: 0;
+  z-index: 1;
+
+}
+
+.menu__logo-image {
+  width: 100%;
+}
+
+.menu__logo {
+  max-width: 100px;
+}
+
+.menu__item {
+  margin-right: 24px;
+  font-weight: 700;
+  font-size: 0.75rem;
+  color: var(--text-color);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.menu__item--button {
+  border: none;
+  background-color: var(--tertiary-color);
+  border-radius: 500px;
+  padding: 8px 26px;
+  transition: background 1s, color 1s;
+  margin: 0;
+}
+
+.menu__item--button:hover {
+  background-color: var(--btn-link-bg-color);
+  color: var(--btn-link-color);
+}
+
